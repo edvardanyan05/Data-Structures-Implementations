@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 struct Node{
@@ -14,11 +15,18 @@ struct Node{
 class BinaryTree{
 private:
     Node *head;
+    void deleteSubTree(Node *);
 public:
     BinaryTree(){};
     ~BinaryTree(){};
 public:
     void insertNode(int){};
+    void inorderTreeWalk(Node *, vector <int> &);
+    void preorderTreeWalk(Node *, vector <int> &);
+    void postorderTreeWalk(Node *head, vector <int> &);
+    
+    size_t heightOfTree(Node *);
+
+    Node* searching(Node *, int);
 }
 
-void deleteSubTree(Node *);
