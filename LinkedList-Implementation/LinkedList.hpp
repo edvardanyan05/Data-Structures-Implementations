@@ -12,6 +12,7 @@ struct Node{
     Node(int);
 };
 
+
 class List{
 private:
     Node* head;

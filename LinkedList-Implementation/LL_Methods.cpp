@@ -6,6 +6,7 @@ void List :: insert_begin(int value){
     head = newNode;
 }
 
+
 void List :: insert_end(int value){
     Node* newNode = new Node(value);
     if(head == nullptr){
@@ -18,6 +19,7 @@ void List :: insert_end(int value){
         p = p->next;
     p->next = newNode;
 }
+
 
 void List :: deleteNodeByValue(int val){
     if(head == nullptr)
@@ -40,6 +42,7 @@ void List :: deleteNodeByValue(int val){
     delete needDeletePTR;
 }
 
+
 void List :: printList() const{
     Node*p = head;
     cout << "List - ";
@@ -49,6 +52,7 @@ void List :: printList() const{
     }
     cout << endl;
 }
+
 
 size_t List :: size() const{
     size_t len = 0;

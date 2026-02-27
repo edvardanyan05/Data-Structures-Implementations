@@ -22,6 +22,7 @@ List& List :: operator=(const List& other){
     return *this;
 }
 
+
 List& List :: operator=(List&& other){
     if (this == &other)
         return *this;
@@ -36,6 +37,7 @@ List& List :: operator=(List&& other){
     other.head = nullptr;
     return *this;
 }
+
 
 List List :: operator+(const List& other) const{
     List tmp;
@@ -72,6 +74,7 @@ List List :: operator+(const List& other) const{
     }
     return tmp;
 }
+
 
 List& List :: operator+=(const List& other){
     *this = *this + other;

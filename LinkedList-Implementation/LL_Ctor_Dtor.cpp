@@ -4,6 +4,7 @@ List :: List(){
     head = nullptr;
 }
 
+
 List :: List(size_t lst_length, ...){
     if (lst_length == 0) {
         head = nullptr;
@@ -23,6 +24,7 @@ List :: List(size_t lst_length, ...){
     va_end(args);
 }
 
+
 List :: List(const List &other){
     if(!other.head){
         head = nullptr;
@@ -38,10 +40,12 @@ List :: List(const List &other){
     }
 }
 
+
 List :: List(List &&other){
     head = other.head;
     other.head = nullptr;
 }
+
 
 List :: ~List(){
     while(head != nullptr){
