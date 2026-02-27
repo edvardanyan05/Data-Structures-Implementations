@@ -19,11 +19,11 @@ void List :: insert_end(int value){
     p->next = newNode;
 }
 
-void List :: deleteNodeByValue(int value){
+void List :: deleteNodeByValue(int val){
     if(head == nullptr)
         return;
 
-    if(head->val == value){
+    if(head->value == val){
         Node*needDeletePTR = head; 
         head = head->next;
         delete needDeletePTR;
@@ -31,7 +31,7 @@ void List :: deleteNodeByValue(int value){
     }    
     
     Node*p = head;
-    while(p->next != nullptr && p->next->val != value)
+    while(p->next != nullptr && p->next->value != val)
         p = p->next;
     if(p->next == nullptr)
         return;
@@ -44,7 +44,7 @@ void List :: printList() const{
     Node*p = head;
     cout << "List - ";
     while(p != nullptr){
-        cout <<p->val << " ";
+        cout <<p->value << " ";
         p = p->next;
     }
     cout << endl;

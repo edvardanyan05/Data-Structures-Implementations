@@ -1,11 +1,11 @@
 #include "LinkedList.hpp"
 
 Node :: Node(){
-    val = 0;
+    value = 0;
     next = nullptr;
 }
 
 Node :: Node(int data){
-    val = data;
+    value = data;
     next = nullptr;
 }
