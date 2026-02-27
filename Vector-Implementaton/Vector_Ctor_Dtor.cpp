@@ -1,4 +1,4 @@
-#include "vectorIplement.hpp"
+#include "VectorImplement.hpp"
 
 Vector :: Vector(){
     m_capacity = 1;
@@ -13,7 +13,6 @@ Vector :: Vector(size_t n){
 }
 
 Vector :: Vector(const Vector& other){
-    cout << "cpy ctor" << endl;
     m_capacity = other.m_capacity;
     m_size = other.m_size;
     ptr_arr = new int[m_capacity];
@@ -22,7 +21,6 @@ Vector :: Vector(const Vector& other){
 }
     
 Vector :: Vector(Vector&& other){
-    cout << "mv ctor" << endl;
     m_capacity = other.m_capacity;
     m_size = other.m_size;
     ptr_arr = other.ptr_arr;

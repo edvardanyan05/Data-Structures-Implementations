@@ -15,9 +15,11 @@ public:
     Vector(size_t);
     Vector(const Vector&);
     Vector(Vector&&);
-    Vector operator=(const Vector&);
-    Vector operator+(const Vector&) const;
     ~Vector();
+    Vector  operator+(const Vector&) const;
+    Vector& operator=(const Vector&);
+    Vector& operator=(Vector&&);
+    Vector& operator+=(const Vector&);
 
 public:
     void push_back(int);
