@@ -1,4 +1,4 @@
-#include "BinaryTree.hpp"
+#include "BinarySearchTree.hpp"
 
 size_t BinaryTree :: heightOfTree(Node *head){
     if (!head)

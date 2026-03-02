@@ -1,4 +1,4 @@
-#include "BinaryTree.hpp"
+#include "BinarySearchTree.hpp"
 
 void BinaryTree :: insertNode(int val){
     if (!head){

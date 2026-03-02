@@ -1,4 +1,4 @@
-#include "BinaryTree.hpp"
+#include "BinarySearchTree.hpp"
 
 void BinaryTree :: postorderTreeWalk(Node *head, vector <int> &tree_elements){
     if (!head)

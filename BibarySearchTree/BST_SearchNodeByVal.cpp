@@ -1,4 +1,4 @@
-#include "BinaryTree.hpp"
+#include "BinarySearchTree.hpp"
 
 Node* BinaryTree :: searching(Node *head , int val){
     if (!head || head->value == val)

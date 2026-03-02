@@ -1,6 +1,6 @@
-#include "BinaryTree.hpp"
+#include "BinarySearchTree.hpp"
 
-void deleteSubTree(Node *head){
+void BinaryTree :: deleteSubTree(Node *head){
     if (!head)
         return;
     deleteSubTree(head->left);

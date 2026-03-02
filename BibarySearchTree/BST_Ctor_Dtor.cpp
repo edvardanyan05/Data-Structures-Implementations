@@ -1,4 +1,4 @@
-#include "BinaryTree.hpp"
+#include "BinarySearchTree.hpp"
 
 BinaryTree :: BinaryTree(){
     head = nullptr;
@@ -6,4 +6,5 @@ BinaryTree :: BinaryTree(){
 
 BinaryTree :: ~BinaryTree(){
     deleteSubTree(head);
+    head = nullptr;
 }
