@@ -1,4 +1,8 @@
 #include "BinarySearchTree.hpp"
+#include <iostream>
+#include <vector>
+#include <climits>
+using namespace std;
 
 int main() {
     BinaryTree tree;
@@ -19,24 +23,55 @@ int main() {
     vector<int> preorder;
     vector<int> postorder;
 
-    // Traversals
+    // Traversals before deletion
     tree.inorderTreeWalk(tree.getRoot(), inorder);
     tree.preorderTreeWalk(tree.getRoot(), preorder);
     tree.postorderTreeWalk(tree.getRoot(), postorder);
 
+    cout << "Initial tree:" << endl;
     cout << "Inorder: ";
-    for (int v : inorder)
-        cout << v << " ";
+    for (int v : inorder) cout << v << " ";
     cout << endl;
 
     cout << "Preorder: ";
-    for (int v : preorder)
-        cout << v << " ";
+    for (int v : preorder) cout << v << " ";
     cout << endl;
 
     cout << "Postorder: ";
-    for (int v : postorder)
-        cout << v << " ";
+    for (int v : postorder) cout << v << " ";
+    cout << endl;
+
+    // Delete some nodes
+    cout << "\nDeleting 15 (node with two children)..." << endl;
+    tree.deleteNode(tree.getRoot(), 15);
+
+    cout << "Deleting 4 (node with one child)..." << endl;
+    tree.deleteNode(tree.getRoot(), 4);
+
+    cout << "Deleting 2 (leaf node)..." << endl;
+    tree.deleteNode(tree.getRoot(), 2);
+
+    // Clear traversal vectors
+    inorder.clear();
+    preorder.clear();
+    postorder.clear();
+
+    // Traversals after deletion
+    tree.inorderTreeWalk(tree.getRoot(), inorder);
+    tree.preorderTreeWalk(tree.getRoot(), preorder);
+    tree.postorderTreeWalk(tree.getRoot(), postorder);
+
+    cout << "\nTree after deletions:" << endl;
+    cout << "Inorder: ";
+    for (int v : inorder) cout << v << " ";
+    cout << endl;
+
+    cout << "Preorder: ";
+    for (int v : preorder) cout << v << " ";
+    cout << endl;
+
+    cout << "Postorder: ";
+    for (int v : postorder) cout << v << " ";
     cout << endl;
 
     // Height of tree
@@ -47,7 +82,7 @@ int main() {
     if (found)
         cout << "Found node with value: " << found->value << endl;
     else
-        cout << "Node not found." << endl;
+        cout << "Node 15 not found." << endl;
 
     // Min / Max values
     Node* minNode = tree.minVal(tree.getRoot());

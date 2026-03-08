@@ -25,13 +25,14 @@ public:
     void inorderTreeWalk(Node *, vector <int> &);
     void preorderTreeWalk(Node *, vector <int> &);
     void postorderTreeWalk(Node *, vector <int> &);
+    void deleteNode(Node *&, int);
     
     size_t heightOfTree(Node *);
 
     Node* searching(Node *, int);
     Node* minVal(Node *);
     Node* maxVal(Node *);
-    Node* getRoot();
+    Node*& getRoot();
 
     bool isValid(Node *, int, int);
 };

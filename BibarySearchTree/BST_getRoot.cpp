@@ -1,5 +1,5 @@
 #include "BinarySearchTree.hpp"
 
-Node* BinaryTree :: getRoot(){
+Node*& BinaryTree :: getRoot(){
     return head;
 }
