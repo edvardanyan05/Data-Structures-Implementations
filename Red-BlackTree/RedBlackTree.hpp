@@ -20,10 +20,12 @@ class RedBlackTree{
 private:
     Node* head;
     void deleteTree(Node *);
+    void fixup(Node *);
 public:
     RedBlackTree();
     ~RedBlackTree();
 public:
     void leftRotate(Node *);
     void rightRotate(Node *);
+    void insertNode(int);
 };
