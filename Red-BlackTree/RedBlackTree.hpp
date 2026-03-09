@@ -28,4 +28,10 @@ public:
     void leftRotate(Node *);
     void rightRotate(Node *);
     void insertNode(int);
+
+    Node*  minVal(Node *);
+    Node*  maxVal(Node *);
+    Node*& getRoot();
+
+    size_t heightOfTree(Node *);
 };
