@@ -32,8 +32,8 @@ public:
 
     Node*  searching(Node *, int);
     Node*  successor(int);
-    Node*  minVal();
-    Node*  maxVal();
+    Node*  minValNode();
+    Node*  maxValNode();
     Node*& getRoot();
 
     size_t heightOfTree(Node *);
