@@ -28,8 +28,10 @@ public:
     ~RedBlackTree();
 public:
     void insertNode(int);
+    void deleteNode(int);
 
     Node*  searching(Node *, int);
+    Node*  successor(int);
     Node*  minVal();
     Node*  maxVal();
     Node*& getRoot();
