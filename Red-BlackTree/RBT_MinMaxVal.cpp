@@ -1,19 +1,21 @@
 #include "RedBlackTree.hpp"
 
-Node* RedBlackTree :: minVal(Node *head){
+Node* RedBlackTree :: minVal(){
     if (head == nullptr)
         return nullptr;
 
-    while(head->left)
-        head = head->left;
-    return head;
+    Node *it = head;
+    while(it->left)
+        it = it->left;
+    return it;
 }
 
-Node* RedBlackTree :: maxVal(Node *head){
+Node* RedBlackTree :: maxVal(){
     if (head == nullptr)
         return nullptr;
-    
-    while(head->right)
-        head = head->right;
-    return head;
+
+    Node *it = head;
+    while(it->right)
+        it = it->right;
+    return it;
 }

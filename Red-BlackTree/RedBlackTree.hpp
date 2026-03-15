@@ -30,8 +30,8 @@ public:
     void insertNode(int);
 
     Node*  searching(Node *, int);
-    Node*  minVal(Node *);
-    Node*  maxVal(Node *);
+    Node*  minVal();
+    Node*  maxVal();
     Node*& getRoot();
 
     size_t heightOfTree(Node *);
