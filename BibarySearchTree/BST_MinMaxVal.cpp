@@ -1,19 +1,21 @@
 #include "BinarySearchTree.hpp"
 
-Node* BinaryTree :: minVal(Node *head){
+Node* BinaryTree :: minVal(){
     if (head == nullptr)
         return nullptr;
 
-    while(head->left)
-        head = head->left;
-    return head;
+    Node *it = head;
+    while(it->left)
+        it = it->left;
+    return it;
 }
 
-Node* BinaryTree :: maxVal(Node *head){
+Node* BinaryTree :: maxVal(){
     if (head == nullptr)
         return nullptr;
-    
-    while(head->right)
-        head = head->right;
-    return head;
+
+    Node *it = head;
+    while(it->right)
+        it = it->right;
+    return it;
 }

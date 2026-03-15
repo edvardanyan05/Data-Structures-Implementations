@@ -16,7 +16,7 @@ struct Node{
 class BinaryTree{
 private:
     Node *head;
-    void deleteSubTree(Node *);
+    void deleteSubTree(Node *&);
 public:
     BinaryTree();
     ~BinaryTree();
@@ -25,13 +25,13 @@ public:
     void inorderTreeWalk(Node *, vector <int> &);
     void preorderTreeWalk(Node *, vector <int> &);
     void postorderTreeWalk(Node *, vector <int> &);
-    void deleteNode(Node *&, int);
+    void deleteNode(int);
     
     size_t heightOfTree(Node *);
 
     Node* searching(Node *, int);
-    Node* minVal(Node *);
-    Node* maxVal(Node *);
+    Node* minVal();
+    Node* maxVal();
     Node*& getRoot();
 
     bool isValid(Node *, int, int);

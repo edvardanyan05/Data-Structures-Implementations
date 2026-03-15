@@ -1,6 +1,6 @@
 #include "BinarySearchTree.hpp"
 
-void BinaryTree::deleteNode(Node *&head, int val) {
+void BinaryTree::deleteNode(int val) {
     if (!head)
         return;
 

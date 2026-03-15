@@ -43,13 +43,13 @@ int main() {
 
     // Delete some nodes
     cout << "\nDeleting 15 (node with two children)..." << endl;
-    tree.deleteNode(tree.getRoot(), 15);
+    tree.deleteNode(15);
 
     cout << "Deleting 4 (node with one child)..." << endl;
-    tree.deleteNode(tree.getRoot(), 4);
+    tree.deleteNode(4);
 
     cout << "Deleting 2 (leaf node)..." << endl;
-    tree.deleteNode(tree.getRoot(), 2);
+    tree.deleteNode(2);
 
     // Clear traversal vectors
     inorder.clear();
@@ -85,8 +85,8 @@ int main() {
         cout << "Node 15 not found." << endl;
 
     // Min / Max values
-    Node* minNode = tree.minVal(tree.getRoot());
-    Node* maxNode = tree.maxVal(tree.getRoot());
+    Node* minNode = tree.minVal();
+    Node* maxNode = tree.maxVal();
 
     if (minNode)
         cout << "Min value: " << minNode->value << endl;
