@@ -51,7 +51,7 @@ void RedBlackTree :: insertNode(int val){
             if (it->right == nullptr){
                 it->right = new Node(val, 1);
                 it->right->parent = it;
-                fixup(head, it->right);
+                fixup(it->right);
                 return;
             }
             it = it->right;
@@ -60,7 +60,7 @@ void RedBlackTree :: insertNode(int val){
             if (it->left == nullptr){
                 it->left = new Node(val, 1);
                 it->left->parent = it;
-                fixup(head, it->left);
+                fixup(it->left);
                 return;
             }
             it = it->left;

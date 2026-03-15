@@ -13,7 +13,7 @@ struct Node{
     Node *parent;
 
     Node();
-    Node(int);
+    Node(int, bool);
 };
 
 class RedBlackTree{

@@ -1,6 +1,6 @@
 #include "RedBlackTree.hpp"
 
-Node* BinaryTree :: minVal(Node *head){
+Node* RedBlackTree :: minVal(Node *head){
     if (head == nullptr)
         return nullptr;
 
@@ -9,7 +9,7 @@ Node* BinaryTree :: minVal(Node *head){
     return head;
 }
 
-Node* BinaryTree :: maxVal(Node *head){
+Node* RedBlackTree :: maxVal(Node *head){
     if (head == nullptr)
         return nullptr;
     
