@@ -21,14 +21,15 @@ private:
     Node* head;
     void deleteTree(Node *);
     void fixup(Node *);
+    void leftRotate(Node *);
+    void rightRotate(Node *);
 public:
     RedBlackTree();
     ~RedBlackTree();
 public:
-    void leftRotate(Node *);
-    void rightRotate(Node *);
     void insertNode(int);
 
+    Node*  searching(Node *, int);
     Node*  minVal(Node *);
     Node*  maxVal(Node *);
     Node*& getRoot();
