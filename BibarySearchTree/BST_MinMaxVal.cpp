@@ -1,6 +1,6 @@
 #include "BinarySearchTree.hpp"
 
-Node* BinaryTree :: minVal(){
+Node* BinaryTree :: minValNode(){
     if (head == nullptr)
         return nullptr;
 
@@ -10,7 +10,7 @@ Node* BinaryTree :: minVal(){
     return it;
 }
 
-Node* BinaryTree :: maxVal(){
+Node* BinaryTree :: maxValNode(){
     if (head == nullptr)
         return nullptr;
 

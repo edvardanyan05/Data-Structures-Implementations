@@ -30,8 +30,9 @@ public:
     size_t heightOfTree(Node *);
 
     Node* searching(Node *, int);
-    Node* minVal();
-    Node* maxVal();
+    Node* successor(int);
+    Node* minValNode();
+    Node* maxValNode();
     Node*& getRoot();
 
     bool isValid(Node *, int, int);

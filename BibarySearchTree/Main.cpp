@@ -29,6 +29,7 @@ int main() {
     tree.postorderTreeWalk(tree.getRoot(), postorder);
 
     cout << "Initial tree:" << endl;
+
     cout << "Inorder: ";
     for (int v : inorder) cout << v << " ";
     cout << endl;
@@ -62,6 +63,7 @@ int main() {
     tree.postorderTreeWalk(tree.getRoot(), postorder);
 
     cout << "\nTree after deletions:" << endl;
+
     cout << "Inorder: ";
     for (int v : inorder) cout << v << " ";
     cout << endl;
@@ -85,8 +87,8 @@ int main() {
         cout << "Node 15 not found." << endl;
 
     // Min / Max values
-    Node* minNode = tree.minVal();
-    Node* maxNode = tree.maxVal();
+    Node* minNode = tree.minValNode();
+    Node* maxNode = tree.maxValNode();
 
     if (minNode)
         cout << "Min value: " << minNode->value << endl;
@@ -97,6 +99,20 @@ int main() {
     // Validate BST
     bool valid = tree.isValid(tree.getRoot(), INT_MIN, INT_MAX);
     cout << "Is valid BST: " << (valid ? "Yes" : "No") << endl;
+
+    // Successor tests
+    cout << "\nSuccessor tests:" << endl;
+
+    vector<int> testValues = {5, 7, 8, 9, 10, 17};
+
+    for (int v : testValues) {
+        Node* succ = tree.successor(v);
+
+        if (succ)
+            cout << "Successor of " << v << " is " << succ->value << endl;
+        else
+            cout << "Successor of " << v << " does not exist." << endl;
+    }
 
     return 0;
 }
