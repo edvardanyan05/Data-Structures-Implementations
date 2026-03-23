@@ -5,7 +5,7 @@ Node* RedBlackTree :: successor(int val){
     if (!current)
         return nullptr;
 
-    Node* successor = nullptr;;
+    Node* successor = nullptr;
     if(current->right){
         successor = current->right;
         while(successor->left)

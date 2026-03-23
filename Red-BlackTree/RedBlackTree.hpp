@@ -20,7 +20,7 @@ class RedBlackTree{
 private:
     Node* head;
     void deleteTree(Node *);
-    void fixup(Node *);
+    void insert_fixup(Node *);
     void leftRotate(Node *);
     void rightRotate(Node *);
 public:

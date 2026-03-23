@@ -1,6 +1,6 @@
 #include "RedBlackTree.hpp"
 
-void RedBlackTree :: fixup(Node *newNode){
+void RedBlackTree :: insert_fixup(Node *newNode){
     while(newNode != head && newNode->parent && newNode->parent->color){
         if (newNode->parent == newNode->parent->parent->left){
             Node *uncle = newNode->parent->parent->right;
@@ -51,7 +51,7 @@ void RedBlackTree :: insertNode(int val){
             if (it->right == nullptr){
                 it->right = new Node(val, 1);
                 it->right->parent = it;
-                fixup(it->right);
+                insert_fixup(it->right);
                 return;
             }
             it = it->right;
@@ -60,7 +60,7 @@ void RedBlackTree :: insertNode(int val){
             if (it->left == nullptr){
                 it->left = new Node(val, 1);
                 it->left->parent = it;
-                fixup(it->left);
+                insert_fixup(it->left);
                 return;
             }
             it = it->left;
