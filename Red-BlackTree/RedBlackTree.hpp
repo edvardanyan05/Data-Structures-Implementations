@@ -21,6 +21,7 @@ private:
     Node* head;
     void deleteTree(Node *);
     void insert_fixup(Node *);
+    void delete_fixup(Node *);
     void leftRotate(Node *);
     void rightRotate(Node *);
 public:
