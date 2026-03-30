@@ -97,7 +97,7 @@ void RedBlackTree :: deleteNode(int val){
     if (!needToDelete)
         return;
     
-    Node* successor = successor(val);
+    Node* succ = successor(val);
     if (needToDelete->color){
         // === The Node we want to delete is RED ===
 
@@ -113,9 +113,9 @@ void RedBlackTree :: deleteNode(int val){
         }
         // successor is RED
         // If needToDelete is red and the successor is red, then the successor is a LEAF Node.
-        if (successor->color){
-            needToDelete->value = successor->value;
-            needToDelete = successor;
+        if (succ->color){
+            needToDelete->value = succ->value;
+            needToDelete = succ;
             if (needToDelete == needToDelete->parent->left) 
                 needToDelete->parent->left = nullptr;
             else
@@ -125,14 +125,14 @@ void RedBlackTree :: deleteNode(int val){
             return ;
         }else{
             // successor is Black
-            // If needToDelete is red and the successor is black,
+            // If needToDelete is red and the succ is black,
             // then the successor can either has only a RED RIGHT child or has NO child at all.
             
             // successor have only a RIGHT child
-            if (successor->right){
-                needToDelete->value = successor->value;
-                successor->value = successor->right->value;
-                needToDelete = successor->right;
+            if (succ->right){
+                needToDelete->value = succ->value;
+                succ->value = succ->right->value;
+                needToDelete = succ->right;
                 needToDelete->parent->right = nullptr;
                 delete needToDelete;
                 needToDelete = nullptr;
@@ -141,8 +141,8 @@ void RedBlackTree :: deleteNode(int val){
 
             // successor doesn't have child
             // need double black fixup
-            needToDelete->value = successor->value;
-            needToDelete = successor;
+            needToDelete->value = succ->value;
+            needToDelete = succ;
             delete_fixup(needToDelete);  
             if (needToDelete == needToDelete->parent->left)
                 needToDelete->parent->left = nullptr;
@@ -191,8 +191,8 @@ void RedBlackTree :: deleteNode(int val){
 
         // needToDelete has 2 children
 
-        needToDelete->value = successor->value;
-        needToDelete = successor;
+        needToDelete->value = succ->value;
+        needToDelete = succ;
         // successor does not have children
         if (!needToDelete->right){
             if (!needToDelete->color)
@@ -207,7 +207,7 @@ void RedBlackTree :: deleteNode(int val){
             return;
         }
 
-        // successor has RED Right child
+        // succ has RED Right child
         needToDelete->value = needToDelete->right->value;
         needToDelete = needToDelete->right;
         needToDelete->parent->right = nullptr;

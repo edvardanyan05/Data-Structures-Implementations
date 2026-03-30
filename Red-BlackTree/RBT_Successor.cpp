@@ -5,18 +5,18 @@ Node* RedBlackTree :: successor(int val){
     if (!current)
         return nullptr;
 
-    Node* successor = nullptr;
+    Node* succ = nullptr;
     if(current->right){
-        successor = current->right;
-        while(successor->left)
-            successor = successor->left;
-        return successor;
+        succ = current->right;
+        while(succ->left)
+            succ = succ->left;
+        return succ;
     }
 
-    successor = current->parent;
-    while(successor && current == successor->right){
-        current = successor;
-        successor = successor->parent;
+    succ = current->parent;
+    while(succ && current == succ->right){
+        current = succ;
+        succ = succ->parent;
     }
-    return successor;
+    return succ;
 }
